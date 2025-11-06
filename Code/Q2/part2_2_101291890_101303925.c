@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define SLEEP 500000
+#define SLEEP 500000 // added to set a limit before the program should auto kill it's processes
 
 int main(void)
 {
@@ -14,7 +14,8 @@ int main(void)
         return 1;
     } else if (pid == 0) { // child (P2)
         // Replace child with the separate program
-        execlp("./part2", "part2");
+        execlp("./part2_2", "part2_2", (char *)NULL);
+        exit(1);
     } else { // parent (P1)
         printf("P1 started (pid=%d), child pid=%d\n", getpid(), pid);
         int counter = 0;
