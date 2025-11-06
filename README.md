@@ -2,16 +2,7 @@
 
 for Part II, I used Win32 to develop the code, and then compiled it within WSL.
 
-steps:
-
-1. change to code directory
-2. gcc -Wall -Wextra -O2 part2_#_101291890_101303925.c -o q# (replace code file name when needed)
-3. ./q#
-
-example:
-
-gcc -Wall -Wextra -O2 part2_5_101291890_101303925.c -o q5 && gcc -Wall -Wextra -O2 part2_5.c -o part2_5
-./q5
+use compile_all.sh to compile the files
 
 to get man pages in terminal:
 
