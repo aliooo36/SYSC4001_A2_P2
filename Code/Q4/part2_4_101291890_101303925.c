@@ -28,7 +28,7 @@ int main(void)
         return 1;
     } else if (pid == 0) { // child (P2)
         shmdt(data); // detach shared mem piror to loading new program
-        execlp("./part2_4", "part2_4", (char *)NULL);
+        execlp("./part2_4_aux_101291890_101303925", "part2_4_aux_101291890_101303925", (char *)NULL);
         exit(1);
     } else { // parent (P1)
         printf("P1 started (pid=%d), child pid=%d\n", getpid(), pid);

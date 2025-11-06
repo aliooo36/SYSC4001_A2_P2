@@ -14,7 +14,7 @@ int main(void)
         return 1;
     } else if (pid == 0) { // child (P2)
         // Replace child with the separate program
-        execlp("./part2_2", "part2_2", (char *)NULL);
+        execlp("./part2_2_aux_101291890_101303925", "part2_2_aux_101291890_101303925", (char *)NULL);
         exit(1);
     } else { // parent (P1)
         printf("P1 started (pid=%d), child pid=%d\n", getpid(), pid);

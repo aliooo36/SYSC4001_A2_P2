@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+// FOR THIS QUESTION IT IS ASSUMED THAT P1 IS JUST IDLE THE ENTIRE TIME, WAITING FOR P2 TO FINISH AND THEN P1 IS KILLED
+
 #define SLEEP 500000
 
 int main(void)
@@ -15,7 +17,7 @@ int main(void)
         return 1;
     } else if (pid == 0) { // child (P2)
         // Replace child with the separate program
-        execlp("./part2_3", "part2_3", (char *)NULL);
+        execlp("./part2_3_aux_101291890_101303925", "part2_3_aux_101291890_101303925", (char *)NULL);
         exit(1);
     } else { // parent (P1)
         printf("P1 started (pid=%d), child pid=%d\n", getpid(), pid);
