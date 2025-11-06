@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define SLEEP 500000 // added to set a limit before the program should auto kill it's processes
+#define SLEEP 500000
 
 int main(void)
 {
