@@ -12,14 +12,19 @@ int main(void)
     // inital parent process creation
     pid_t pid = fork();
 
-    if (pid < 0) {
+    if (pid < 0)
+    {
         perror("fork failed");
         return 1;
-    } else if (pid == 0) { // child (P2)
+    }
+    else if (pid == 0)
+    { // child (P2)
         // Replace child with the separate program
         execlp("./part2_3_aux_101291890_101303925", "part2_3_aux_101291890_101303925", (char *)NULL);
         exit(1);
-    } else { // parent (P1)
+    }
+    else
+    { // parent (P1)
         printf("P1 started (pid=%d), child pid=%d\n", getpid(), pid);
         wait(NULL);
         printf("P2 done, exiting P1\n");
